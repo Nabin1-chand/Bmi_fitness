@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_app/screens/layout.dart';
 import 'package:flutter_app/screens/menu_page.dart';
 
@@ -12,7 +13,7 @@ class IntroScreen extends StatelessWidget {
         title: const Text("Intro screen"),
       ),
       drawer: const Menu(),
-      body: const MyApp(),
+      body: const Layout(),
     );
   }
 }

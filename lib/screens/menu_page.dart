@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/main.dart';
 import 'package:flutter_app/screens/bmi_screen.dart';
-import 'package:flutter_app/screens/intro_screen.dart';
+// import 'package:flutter_app/screens/intro_screen.dart';
+import 'package:flutter_app/screens/layout.dart';
 
 class Menu extends StatelessWidget {
   const Menu({super.key});
@@ -19,7 +21,8 @@ class Menu extends StatelessWidget {
       'Home',
       'BMI Calulator',
       'Weather',
-      'Tranning'
+      'Tranning',
+      'services'
     ];
     List<Widget> menuItems = [];
     menuItems.add(const DrawerHeader(
@@ -38,12 +41,16 @@ class Menu extends StatelessWidget {
           onTap: () {
             switch (element) {
               case 'Home':
-                screen = const IntroScreen();
+                screen = const MyApp();
                 break;
               case 'BMI Calulator':
                 screen = const BMIScreen();
+                break;
+              case 'Weather':
+                break;
             }
-            Navigator.pop(context);
+
+            // Navigator.pop(context);
             Navigator.push(
                 context,
                 MaterialPageRoute(
