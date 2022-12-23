@@ -3,6 +3,7 @@ import 'package:flutter_app/main.dart';
 import 'package:flutter_app/screens/bmi_screen.dart';
 // import 'package:flutter_app/screens/intro_screen.dart';
 import 'package:flutter_app/screens/layout.dart';
+import 'package:flutter_app/screens/weather_screen.dart';
 
 class Menu extends StatelessWidget {
   const Menu({super.key});
@@ -47,6 +48,7 @@ class Menu extends StatelessWidget {
                 screen = const BMIScreen();
                 break;
               case 'Weather':
+                screen = WeatherScreen();
                 break;
             }
 
